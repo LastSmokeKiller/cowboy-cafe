@@ -6,7 +6,13 @@ namespace CowboyCafe.Data
 {
     public class DakotaDoubleBurger
     {
+        /// <summary>
+        /// The class representing the Dakota Double Burger entree
+        /// </summary>
         private bool bun = true;
+        /// <summary>
+        /// If Dakota has buns
+        /// </summary>
         public bool Bun
         {
             get { return bun; }
@@ -14,6 +20,9 @@ namespace CowboyCafe.Data
         }
 
         private bool ketchup = true;
+        /// <summary>
+        /// If Dakota brought ketchup
+        /// </summary>
         public bool Ketchup
         {
             get { return ketchup; }
@@ -21,6 +30,9 @@ namespace CowboyCafe.Data
         }
 
         private bool mustard = true;
+        /// <summary>
+        /// If Dakota didn't forget the mustard
+        /// </summary>
         public bool Mustard
         {
             get { return mustard; }
@@ -28,6 +40,9 @@ namespace CowboyCafe.Data
         }
 
         private bool pickle = true;
+        /// <summary>
+        /// If Dakota has pickle
+        /// </summary>
         public bool Pickle
         {
             get { return pickle; }
@@ -35,6 +50,9 @@ namespace CowboyCafe.Data
         }
 
         private bool cheese = true;
+        /// <summary>
+        /// If Dakota has cheese
+        /// </summary>
         public bool Cheese
         {
             get { return cheese; }
@@ -42,16 +60,27 @@ namespace CowboyCafe.Data
         }
 
         private bool tomato = true;
+        /// <summary>
+        /// If Dakota has nicely sliced tomatos
+        /// </summary>
         public bool Tomato
         {
             get { return tomato; }
             set { tomato = value; }
         }
-
+        /// <summary>
+        /// If Dakota has Lettuce
+        /// </summary>
         public bool Lettuce { get; set; } = true;
 
+        /// <summary>
+        /// If Dakota slapped some Mayo in there
+        /// </summary>
         public bool Mayo { get; set; } = true;
 
+        /// <summary>
+        /// How much you pay for Dakota
+        /// </summary>
         public double Price
         {
             get
@@ -60,6 +89,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// How much you pay for Dakota
+        /// </summary>
         public uint Calories
         {
             get
@@ -68,6 +100,10 @@ namespace CowboyCafe.Data
             }
         }
 
+
+        /// <summary>
+        /// How Dakota wants to be prepared
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get

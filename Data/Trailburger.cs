@@ -6,8 +6,13 @@ namespace CowboyCafe.Data
 {
     public class TrailBurger
     {
-
+        /// <summary>
+        /// The class for the TrailBurger entree
+        /// </summary>
         private bool bun = true;
+        /// <summary>
+        /// If the Trail has buns
+        /// </summary>
         public bool Bun
         {
             get { return bun; }
@@ -15,6 +20,9 @@ namespace CowboyCafe.Data
         }
 
         private bool ketchup = true;
+        /// <summary>
+        /// If the Trail has ketchup
+        /// </summary>
         public bool Ketchup
         {
             get { return ketchup; }
@@ -22,6 +30,9 @@ namespace CowboyCafe.Data
         }
 
         private bool mustard = true;
+        /// <summary>
+        /// If the Trail has mustard
+        /// </summary>
         public bool Mustard
         {
             get { return mustard; }
@@ -29,6 +40,9 @@ namespace CowboyCafe.Data
         }
 
         private bool pickle = true;
+        /// <summary>
+        /// If the Trail has pickles
+        /// </summary>
         public bool Pickle
         {
             get { return pickle; }
@@ -36,12 +50,18 @@ namespace CowboyCafe.Data
         }
 
         private bool cheese = true;
+        /// <summary>
+        /// If the Trail has cheese
+        /// </summary>
         public bool Cheese
         {
             get { return cheese; }
             set { cheese = value; }
         }
 
+        /// <summary>
+        /// How much the Trail cost
+        /// </summary>
         public double Price
         {
             get
@@ -50,6 +70,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// The amount of calories in the Trail
+        /// </summary>
         public uint Calories
         {
             get
@@ -58,6 +81,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Special Instructions for the Trail
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
