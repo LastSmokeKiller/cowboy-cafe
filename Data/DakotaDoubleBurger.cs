@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class DakotaDoubleBurger
+    public class DakotaDoubleBurger:Entree
     {
         /// <summary>
         /// The class representing the Dakota Double Burger entree
@@ -81,7 +81,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// How much you pay for Dakota
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -92,7 +92,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// How much you pay for Dakota
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -104,7 +104,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// How Dakota wants to be prepared
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

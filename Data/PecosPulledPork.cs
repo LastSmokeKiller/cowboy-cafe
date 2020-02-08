@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class PecosPulledPork
+    public class PecosPulledPork:Entree
     {
         /// <summary>
         /// The class that represents the Pecos Pulled Pork entree
@@ -32,7 +32,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// How much Pecos cost
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -43,7 +43,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The amount of Calories in Pecos
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -54,7 +54,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// How to prepare Pecos
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
