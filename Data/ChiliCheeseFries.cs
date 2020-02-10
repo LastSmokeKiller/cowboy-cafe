@@ -4,8 +4,14 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// The Chili Cheese Fries Side
+    /// </summary>
     public class ChiliCheeseFries:Side
     {
+        /// <summary>
+        /// How many Calories are in each size of the CCF
+        /// </summary>
         public override uint Calories
         {
             get
@@ -24,7 +30,9 @@ namespace CowboyCafe.Data
                 
             } 
         }
-
+        /// <summary>
+        /// The price of each size of the CCF
+        /// </summary>
         public override double Price
         {
             get
