@@ -7,7 +7,7 @@ namespace CowboyCafe.Data
     public class JerkedSoda:Drink
     {
 
-        public override bool Ice { get; set; }
+        public override bool Ice { get; set; } = true;
 
         public SodaFlavor Flavor { get; set; }
 
