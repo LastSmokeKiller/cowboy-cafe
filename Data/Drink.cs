@@ -11,7 +11,7 @@ namespace CowboyCafe.Data
 
         public abstract uint Calories { get; }
 
-        public virtual List<string> SpecialInstructions { get; }
+        public abstract List<string> SpecialInstructions { get; }
 
         public virtual bool Ice { get; set; } = true;
     }
