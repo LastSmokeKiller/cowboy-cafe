@@ -9,7 +9,6 @@ namespace CowboyCafe.DataTests
     public class CowboyCoffeeTest
     {
         
-
         [Fact]
         public void ShouldNotBeIcedByDefault()
         {
