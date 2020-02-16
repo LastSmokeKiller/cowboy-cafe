@@ -13,6 +13,6 @@ namespace CowboyCafe.Data
 
         public abstract List<string> SpecialInstructions { get; }
 
-        public virtual bool Ice { get; set; } = true;
+        public abstract bool Ice { get; set; }
     }
 }

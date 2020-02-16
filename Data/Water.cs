@@ -4,9 +4,11 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public class Water:Drink
+    public class Water : Drink
     {
         public bool Lemon { get; set; } = false;
+
+        public override bool Ice { get; set; } = true;
 
         public override double Price
         {

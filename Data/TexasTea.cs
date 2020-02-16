@@ -7,6 +7,8 @@ namespace CowboyCafe.Data
     public class TexasTea:Drink
     {
         public bool Lemon { get; set; } = false;
+
+        public override bool Ice { get; set; } = true;
         public bool Sweet { get; set; } = true;
 
         public override double Price
