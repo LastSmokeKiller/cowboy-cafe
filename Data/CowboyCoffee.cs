@@ -55,7 +55,7 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
                 if (RoomForCream) instructions.Add("Room for Cream");
-                if (!Ice) instructions.Add("Add Ice");
+                if (Ice) instructions.Add("Add Ice");
                 return SpecialInstructions;
             }
         }
