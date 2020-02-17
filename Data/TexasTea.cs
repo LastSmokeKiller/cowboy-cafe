@@ -4,13 +4,24 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// The class for the Texas Tea Drink
+    /// </summary>
     public class TexasTea:Drink
     {
+        /// <summary>
+        /// Checks if you want to put a lemon in your tea
+        /// </summary>
         public bool Lemon { get; set; } = false;
-
-        public override bool Ice { get; set; } = true;
+        
+        /// <summary>
+        /// Checks if you want your tea to actually taste good with sugar or without sugar
+        /// </summary>
         public bool Sweet { get; set; } = true;
 
+        /// <summary>
+        /// Checks the price for the tea
+        /// </summary>
         public override double Price
         {
             get
@@ -29,6 +40,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Checks how many Calories are in your tea depending on if it is sweet or not
+        /// </summary>
         public override uint Calories
         {
             get
@@ -65,6 +79,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Checks to see how you want your tea prepared
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get

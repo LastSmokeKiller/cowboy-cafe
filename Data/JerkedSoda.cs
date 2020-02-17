@@ -4,13 +4,20 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// The class for the Jerked Soda Drink
+    /// </summary>
     public class JerkedSoda:Drink
     {
 
-        public override bool Ice { get; set; } = true;
-
+        /// <summary>
+        /// Checks what flavor you want your soda
+        /// </summary>
         public SodaFlavor Flavor { get; set; }
 
+        /// <summary>
+        /// Checks the price for the Soda
+        /// </summary>
         public override double Price
         {
             get
@@ -30,6 +37,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Checks how many calories are in the soda
+        /// </summary>
         public override uint Calories
         {
             get
@@ -48,6 +58,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Sees if you have any requests on your soda
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get

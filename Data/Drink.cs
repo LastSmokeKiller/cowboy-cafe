@@ -6,14 +6,29 @@ namespace CowboyCafe.Data
 {
     public abstract class Drink
     {
+        /// <summary>
+        /// Gets an inherited size for any drink
+        /// </summary>
         public virtual Size Size{get;set;}
 
+        /// <summary>
+        /// gets a price for any drink
+        /// </summary>
         public abstract double Price {get;}
 
+        /// <summary>
+        /// Gets the calories for any drink
+        /// </summary>
         public abstract uint Calories { get; }
 
+        /// <summary>
+        /// Makes special instructions for any drink
+        /// </summary>
         public abstract List<string> SpecialInstructions { get; }
 
-        public abstract bool Ice { get; set; }
+        /// <summary>
+        /// Sets if the 
+        /// </summary>
+        public virtual bool Ice { get; set; } = true;
     }
 }
