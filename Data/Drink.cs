@@ -7,6 +7,7 @@ namespace CowboyCafe.Data
     public abstract class Drink
     {
         public virtual Size Size{get;set;}
+
         public abstract double Price {get;}
 
         public abstract uint Calories { get; }

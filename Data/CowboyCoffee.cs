@@ -49,14 +49,14 @@ namespace CowboyCafe.Data
         }
 
 
-        public override List<string> SpecialInstructions 
+        public override List<string> SpecialInstructions
         {
             get
             {
-                var instructions = new List<string>();
-                if (Ice) instructions.Add("Add Ice");
-                if (RoomForCream) instructions.Add("Room for Cream");
-                return SpecialInstructions;
+                var instr = new List<string>();
+                if (Ice) instr.Add("Add Ice");
+                if (RoomForCream) instr.Add("Room for Cream");
+                return instr;
             }
         }
     }
