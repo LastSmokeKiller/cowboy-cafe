@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: PanDeCampo
+ * Purpose: I'm not really sure what this item is :/
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

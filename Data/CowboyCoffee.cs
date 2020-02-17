@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ *  Class: Cowboy Coffee
+ *  Purpose: A class for some coffee
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

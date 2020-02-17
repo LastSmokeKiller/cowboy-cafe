@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: TexasTea
+ * Purpose: A Tea drink that is either sweet or tastes bad
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

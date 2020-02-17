@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: SodaFlavor
+ * Purpose: To allow the JerkedSoda to get a flavor
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

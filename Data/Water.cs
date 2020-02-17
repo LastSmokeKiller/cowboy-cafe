@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: Water
+ * Purpose: A cheap drink that rehydrates you
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

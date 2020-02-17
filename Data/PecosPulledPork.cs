@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: PecosPulledPork
+ * Purpose: Smoked Pulled Pork for good ole fashioned BBQ
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

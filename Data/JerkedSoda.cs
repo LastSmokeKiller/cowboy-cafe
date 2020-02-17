@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: JerkedSoda
+ * Purpose: To allow a customer to order soda
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

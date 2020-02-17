@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: Drink
+ * Purpose: To set a base Drink class to be inherited from.
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

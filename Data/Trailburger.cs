@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: TrailBurger
+ * Purpose: A Good Ole Burger
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

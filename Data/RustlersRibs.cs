@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: RustlerRibs
+ * Purpose: Good ole fashioned ribs
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
