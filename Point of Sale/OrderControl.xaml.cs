@@ -24,9 +24,46 @@ namespace Point_of_Sale
             InitializeComponent();
         }
 
-        private void AddCowpokeChiliButton_Click(object s, RoutedEventArgs e)
+        
+
+        private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new AngryChicken());
+        }
+
+        private void AddCowpokeChili_Click(object sender, RoutedEventArgs e)
         {
             OrderList.Items.Add(new CowpokeChili());
+        }
+
+        private void AddDakotaDoubleBurger_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new DakotaDoubleBurger());
+        }
+
+        private void AddPecosPulledPork_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new PecosPulledPork());
+        }
+
+        private void AddTexasTripleBurger_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new TexasTripleBurger());
+        }
+
+        private void AddTrailBurger_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new TrailBurger());
+        }
+
+        private void AddChiliCheeseFries_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddJerkedSoda_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new JerkedSoda());
         }
     }
 }
