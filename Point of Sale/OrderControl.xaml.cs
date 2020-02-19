@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CowboyCafe.Data;
 
 namespace Point_of_Sale
 {
@@ -21,6 +22,11 @@ namespace Point_of_Sale
         public OrderControl()
         {
             InitializeComponent();
+        }
+
+        private void AddCowpokeChiliButton_Click(object s, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new CowpokeChili());
         }
     }
 }

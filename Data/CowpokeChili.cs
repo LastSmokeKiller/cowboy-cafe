@@ -87,6 +87,15 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Big Hot Cheesey Cheese";
+        }
     }
 }
 

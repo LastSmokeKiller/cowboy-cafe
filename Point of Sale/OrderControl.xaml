@@ -22,11 +22,18 @@
             <TextBlock TextAlignment="Center">Entrees</TextBlock>
             <Button>Angry Chicken</Button>
             <Button>Cowpoke Chili</Button>
+      
         </StackPanel>
 
         <StackPanel Grid.Column="1">
             <TextBlock TextAlignment="Center">Side</TextBlock>
             <Button>Chili Cheese Fries</Button>
+            
+        </StackPanel>
+
+        <StackPanel Grid.Column="3">
+            <TextBlock TextAlignment="Center">Order</TextBlock>
+            <ListBox Name ="OrderList"></ListBox>
         </StackPanel>
 
 
