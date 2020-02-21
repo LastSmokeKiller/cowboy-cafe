@@ -31,12 +31,18 @@
         <StackPanel Grid.Column="1">
             <TextBlock TextAlignment="Center">Sides</TextBlock>
             <Button Name ="AddChiliCheeseFries" Click="AddChiliCheeseFries_Click">Chili Cheese Fries</Button>
+            <Button Name="AddCornDodgers" Click="AddCornDodgers_Click">Corn Dodgers</Button>
+            <Button Name="AddPanDeCampo" Click="AddPanDeCampo_Click">Pan de Campo</Button>
+            <Button Name="AddBakedBeans" Click="AddBakedBeans_Click">Baked Beans</Button>
             
         </StackPanel>
 
         <StackPanel Grid.Column="2">
             <TextBlock TextAlignment="Center">Drinks</TextBlock>
             <Button Name ="AddJerkedSoda" Click="AddJerkedSoda_Click">Jerked Soda</Button>
+            <Button Name="AddTexasTea" Click="AddTexasTea_Click">Texas Tea</Button>
+            <Button Name ="AddCowboyCoffee" Click="AddCowboyCoffee_Click">Cowboy Coffee</Button>
+            <Button Name="AddWater" Click="AddWater_Click">Water</Button>
         </StackPanel>
 
         <StackPanel Grid.Column="3">
