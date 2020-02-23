@@ -42,6 +42,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Prints correct term
+        /// </summary>
+        /// <returns> Rustler's Ribs </returns>
         public override string ToString()
         {
             return "Rustler's Ribs";

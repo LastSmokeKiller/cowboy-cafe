@@ -52,6 +52,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Prints correct term
+        /// </summary>
+        /// <returns> Corn Dodgers</returns>
         public override string ToString()
         {
             return this.Size.ToString() + " Corn Dodgers";

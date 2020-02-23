@@ -19,18 +19,30 @@ namespace Point_of_Sale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        /// <summary>
+        /// Initializes program
+        /// </summary>
         public OrderControl()
         {
             InitializeComponent();
         }
 
         
-
+        /// <summary>
+        /// Adds the Angry Chicken
+        /// </summary>
+        /// <param name="sender">button</param>
+        /// <param name="e">click</param>
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
             OrderList.Items.Add(new AngryChicken());
         }
 
+        /// <summary>
+        /// Adds Cowpoke CHILI
+        /// </summary>
+        /// <param name="sender">button</param>
+        /// <param name="e">click</param>
         private void AddCowpokeChili_Click(object sender, RoutedEventArgs e)
         {
             OrderList.Items.Add(new CowpokeChili());

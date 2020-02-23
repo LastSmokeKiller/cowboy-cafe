@@ -69,6 +69,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Prints correct term
+        /// </summary>
+        /// <returns> Pecos Pulled Pork </returns>
         public override string ToString()
         {
             return "Pecos Pulled Pork";

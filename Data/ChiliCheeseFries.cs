@@ -51,6 +51,10 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Prints correct term
+        /// </summary>
+        /// <returns> Chili Cheese Fries </returns>
         public override string ToString()
         {
             return this.Size.ToString() + " Chili Cheese Fries";
