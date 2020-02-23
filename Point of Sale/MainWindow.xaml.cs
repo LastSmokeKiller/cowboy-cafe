@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: MainWindow.xaml.cs
+ * Purpose: Controls the window
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
