@@ -84,5 +84,11 @@ namespace CowboyCafe.Data
                 return instr;
             }
         }
+
+        public override string ToString()
+        {
+            if (this.Decaf) return this.Size.ToString() + " Decaf Cowboy Coffee";
+            else return this.Size.ToString() + " Cowboy Coffee";
+        }
     }
 }

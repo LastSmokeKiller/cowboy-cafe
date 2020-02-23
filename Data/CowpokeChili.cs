@@ -94,7 +94,7 @@ namespace CowboyCafe.Data
         /// <returns></returns>
         public override string ToString()
         {
-            return "Big Hot Cheesey Cheese";
+            return "Cowpoke Chili";
         }
     }
 }

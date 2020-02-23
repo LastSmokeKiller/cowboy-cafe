@@ -50,5 +50,10 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        public override string ToString()
+        {
+            return this.Size.ToString() + " Baked Beans";
+        }
     }
 }

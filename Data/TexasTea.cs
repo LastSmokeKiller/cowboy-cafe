@@ -96,5 +96,14 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        public override string ToString()
+        {
+            string sweet;
+            if (this.Sweet) sweet = "Sweet";
+            else sweet = "Plain";
+
+            return this.Size.ToString() + " Texas " + sweet + " Tea";
+        }
     }
 }

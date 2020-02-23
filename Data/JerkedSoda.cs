@@ -77,13 +77,15 @@ namespace CowboyCafe.Data
 
         public override string ToString()
         {
-            if(this.Flavor.ToString() == "OrangeSoda")
+            if (this.Flavor.ToString() == "OrangeSoda")
             {
                 return this.Size.ToString() + " Orange Soda Jerked Soda";
-            } 
-            else if(this.Flavor.ToString() == "CreamSoda") return this.Size.ToString() + " Cream Soda Jerked Soda";
+            }
+            else if (this.Flavor.ToString() == "CreamSoda") return this.Size.ToString() + " Cream Soda Jerked Soda";
+            else if (this.Flavor.ToString() == "BirchBeer") return this.Size.ToString() + " Birch Beer Jerked Soda";
+            else if (this.Flavor.ToString() == "RootBeer") return this.Size.ToString() + " Root Beer Jerked Soda";
 
-            return this.Size.ToString() + " " + this.Flavor.ToString() + " "  + "Jerked Soda";
+            else return this.Size.ToString() + " " + this.Flavor.ToString() + " "  + "Jerked Soda";
         }
     }
 }
