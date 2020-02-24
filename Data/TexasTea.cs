@@ -100,7 +100,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Prints the tea's size and if it is sweet
         /// </summary>
-        /// <returns>the drink with size and sweetness</returns>
+        /// <returns>string</returns>
         public override string ToString()
         {
             string sweet;

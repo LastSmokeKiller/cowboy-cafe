@@ -124,7 +124,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Prints correct term
         /// </summary>
-        /// <returns>Dakota Double Burger </returns>
+        /// <returns>string </returns>
         public override string ToString()
         {
             return "Dakota Double Burger";

@@ -88,7 +88,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Prints correct term with Decaf and size
         /// </summary>
-        /// <returns> the drink with its size and if its decaf </returns>
+        /// <returns> string </returns>
         public override string ToString()
         {
             if (this.Decaf) return this.Size.ToString() + " Decaf Cowboy Coffee";

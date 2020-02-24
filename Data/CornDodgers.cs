@@ -55,7 +55,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Prints correct term
         /// </summary>
-        /// <returns> Corn Dodgers</returns>
+        /// <returns> string</returns>
         public override string ToString()
         {
             return this.Size.ToString() + " Corn Dodgers";

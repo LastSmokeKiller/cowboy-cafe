@@ -49,7 +49,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Prints correct term with size
         /// </summary>
-        /// <returns> the dish with size </returns>
+        /// <returns> string </returns>
         public override string ToString()
         {
             return this.Size.ToString() + " Pan de Campo";

@@ -91,7 +91,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Prints correct term
         /// </summary>
-        /// <returns> Cowpoke Chili</returns>
+        /// <returns> string</returns>
         public override string ToString()
         {
             return "Cowpoke Chili";

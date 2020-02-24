@@ -78,7 +78,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Gets what soda and size and prints
         /// </summary>
-        /// <returns> the soda with size and flavor</returns>
+        /// <returns> string</returns>
         public override string ToString()
         {
             if (this.Flavor.ToString() == "OrangeSoda")

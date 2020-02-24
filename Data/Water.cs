@@ -51,7 +51,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Prints the drink and size
         /// </summary>
-        /// <returns> size and water </returns>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return this.Size.ToString() + " Water";
