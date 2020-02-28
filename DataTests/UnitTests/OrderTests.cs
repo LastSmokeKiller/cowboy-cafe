@@ -10,7 +10,7 @@ namespace CowboyCafe.DataTests
     {
         public class MockOrderItem : IOrderItem
         {
-            public double price { get; set; }
+            public double Price { get; set; }
             public List<string> SpecialInstructions { get; set; } = new List<string>();
         }
 
@@ -53,7 +53,7 @@ namespace CowboyCafe.DataTests
         [Theory]
         [InlineData(new double[] { 1.0, 2.0, 3.0 })]
         [InlineData(new double[] {0, 0, 0})]
-        [InlineData(new double[] { 199.34, 799.69})]
+        [InlineData(new double[] { 199.33, 799.69})]
         [InlineData(new double[] { })]
         [InlineData(new double[] {-5 })]
         [InlineData(new double[] { -4, 10,8 })]
@@ -64,12 +64,12 @@ namespace CowboyCafe.DataTests
         {
             var order = new Order();
             var total = 0.0;
-            foreach(var Price in prices)
+            foreach(var price in prices)
             {
-                total += Price;
+                total += price;
                 order.Add(new MockOrderItem()
                 {
-                    price = Price
+                    Price = price
                 });
             }
             Assert.Equal(total, order.Subtotal);
@@ -100,6 +100,15 @@ namespace CowboyCafe.DataTests
             {
                 order.Remove(item);
             });
+        }
+
+        [Fact]
+
+        public void OrderNumberIsRandom()
+        {
+            var order = new Order();
+            var oldOrder = new Order();
+            Assert.NotEqual(order.OrderNumber, oldOrder.OrderNumber);
         }
     }
 }

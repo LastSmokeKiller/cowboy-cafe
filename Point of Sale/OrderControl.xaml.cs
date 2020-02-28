@@ -39,7 +39,7 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new AngryChicken());
+            OrderSummaryControl.OrderList.Items.Add(new AngryChicken());
         }
 
         /// <summary>
@@ -170,6 +170,16 @@ namespace Point_of_Sale
         private void AddWater_Click(object sender, RoutedEventArgs e)
         {
             OrderList.Items.Add(new Water());
+        }
+
+        /// <summary>
+        /// Adds Rustlers Rib
+        /// </summary>
+        /// <param name="sender">button </param>
+        /// <param name="e">click </param>
+        private void AddRustlerRibs_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new RustlersRibs());
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public abstract class Drink
+    public abstract class Drink:IOrderItem
     {
         /// <summary>
         /// Gets an inherited size for any drink
