@@ -1,8 +1,4 @@
-﻿/* Author: Cole Griem
- * Class: OrderControl.xaml.cs
- * Purpose: Control the buttons
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -19,21 +15,15 @@ using CowboyCafe.Data;
 namespace Point_of_Sale
 {
     /// <summary>
-    /// Interaction logic for OrderControl.xaml
+    /// Interaction logic for MenuItemSelectionControl.xaml
     /// </summary>
-    public partial class OrderControl : UserControl
+    public partial class MenuItemSelectionControl : UserControl
     {
-        /// <summary>
-        /// Initializes program
-        /// </summary>
-        public OrderControl()
+        public MenuItemSelectionControl()
         {
             InitializeComponent();
-            var data = new Order();
-            this.DataContext = data;
         }
 
-        
         /// <summary>
         /// Adds the Angry Chicken
         /// </summary>
@@ -41,11 +31,11 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
-            if(DataContext is Order data)
+            if (DataContext is Order data)
             {
                 data.Add(new AngryChicken());
             }
-            
+
         }
 
         /// <summary>
@@ -55,7 +45,7 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddCowpokeChili_Click(object sender, RoutedEventArgs e)
         {
-            if(DataContext is Order data) data.Add(new CowpokeChili());
+            if (DataContext is Order data) data.Add(new CowpokeChili());
         }
 
         /// <summary>
@@ -186,11 +176,6 @@ namespace Point_of_Sale
         private void AddRustlerRibs_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is Order data) data.Add(new RustlersRibs());
-        }
-
-        private void CompleteOrder_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

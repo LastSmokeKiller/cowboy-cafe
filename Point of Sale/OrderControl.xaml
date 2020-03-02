@@ -5,52 +5,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Point_of_Sale"
              mc:Ignorable="d" 
-             d:DesignHeight="550" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="700">
     <UserControl.Resources>
         <Style TargetType="Button">
-            <Setter Property="Height" Value="75"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="100"/>
         </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <StackPanel>
-            <TextBlock TextAlignment="Center">Entrees</TextBlock>
-            <Button Name="AddAngryChickenButton" Click="AddAngryChickenButton_Click" >Angry Chicken</Button>
-            <Button Name="AddCowpokeChili" Click="AddCowpokeChili_Click">Cowpoke Chili</Button>
-            <Button Name ="AddDakotaDoubleBurger" Click="AddDakotaDoubleBurger_Click">Dakota Double Burger</Button>
-            <Button Name ="AddPecosPulledPork" Click="AddPecosPulledPork_Click">Pecos Pulled Pork</Button>
-            <Button Name ="AddTexasTripleBurger" Click="AddTexasTripleBurger_Click">Texas Triple Burger</Button>
-            <Button Name ="AddTrailBurger" Click="AddTrailBurger_Click">Trail Burger</Button>
-            <Button Name ="AddRustlerRibs" Click="AddRustlerRibs_Click">Rustler's Ribs</Button>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1">
-            <TextBlock TextAlignment="Center">Sides</TextBlock>
-            <Button Name ="AddChiliCheeseFries" Click="AddChiliCheeseFries_Click">Chili Cheese Fries</Button>
-            <Button Name="AddCornDodgers" Click="AddCornDodgers_Click">Corn Dodgers</Button>
-            <Button Name="AddPanDeCampo" Click="AddPanDeCampo_Click">Pan de Campo</Button>
-            <Button Name="AddBakedBeans" Click="AddBakedBeans_Click">Baked Beans</Button>
+            <ColumnDefinition Width="400"/>
             
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Grid Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            <Button Name="ItemSelection">ItemSelection</Button>
+        
+            <Button Name="CancelOrder" Grid.Column="1" >Cancel Order</Button>
+        
+            <Button x:Name="CompleteOrder" Content="Complete Order" Click="CompleteOrder_Click" Grid.Column="2" />
+                
+            </Grid>
+            <local:MenuItemSelectionControl Grid.Column="0"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="2">
-            <TextBlock TextAlignment="Center">Drinks</TextBlock>
-            <Button Name ="AddJerkedSoda" Click="AddJerkedSoda_Click">Jerked Soda</Button>
-            <Button Name="AddTexasTea" Click="AddTexasTea_Click">Texas Tea</Button>
-            <Button Name ="AddCowboyCoffee" Click="AddCowboyCoffee_Click">Cowboy Coffee</Button>
-            <Button Name="AddWater" Click="AddWater_Click">Water</Button>
-        </StackPanel>
-
-        <StackPanel Grid.Column="3">
-            <TextBlock TextAlignment="Center">Order</TextBlock>
-            <ListBox Name ="OrderList"></ListBox>
-        </StackPanel>
-
-
+        <local:OrderSummaryControl HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        
     </Grid>
 </UserControl>
