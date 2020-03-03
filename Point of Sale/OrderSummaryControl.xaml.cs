@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: OrderSummaryControl.xaml.cs
+ * Purpose: Keeps track of items ordered and prices
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

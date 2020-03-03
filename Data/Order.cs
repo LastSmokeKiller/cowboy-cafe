@@ -1,13 +1,26 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: Order.cs
+ * Purpose: has all the order information
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// Lets you order food
+    /// </summary>
     public class Order:INotifyPropertyChanged
     {
+        /// <summary>
+        /// Checks whenever a food item is added or removed
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// The total before purchase
+        /// </summary>
         public double Subtotal { get
             {
                 double sub = 0;
@@ -17,9 +30,14 @@ namespace CowboyCafe.Data
                 }
                 return sub;
             } }
-
+        /// <summary>
+        /// Keeps track of the last number that was used for order number
+        /// </summary>
         private static uint lastOrderNumber;
 
+        /// <summary>
+        /// Gets random number to order from
+        /// </summary>
         public uint OrderNumber { get
             {
                 Random r = new Random();
@@ -39,11 +57,20 @@ namespace CowboyCafe.Data
             
                 
             
-
+        /// <summary>
+        /// A list of food items
+        /// </summary>
         private List<IOrderItem> items = new List<IOrderItem>();
 
+        /// <summary>
+        /// the items list as an array
+        /// </summary>
         public IEnumerable<IOrderItem> Items { get { return items.ToArray(); } }
 
+        /// <summary>
+        /// Adds an item to the order
+        /// </summary>
+        /// <param name="item"></param>
         public void Add(IOrderItem item)
         {
             items.Add(item);
@@ -51,6 +78,10 @@ namespace CowboyCafe.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
+        /// <summary>
+        /// Removes an item from the order
+        /// </summary>
+        /// <param name="item"></param>
         public void Remove(IOrderItem item)
         {
             items.Remove(item);

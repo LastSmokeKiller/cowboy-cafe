@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Cole Griem
+ * Class: MenuItemSelectionControl.xaml.cs
+ * Purpose: Has all the food items, used to be OrderControl but I changed that to this
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

@@ -25,11 +25,11 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-            <Button Name="ItemSelection">ItemSelection</Button>
+            <Button Name="ItemSelection" Click="ItemSelection_Click">Item Selection</Button>
         
-            <Button Name="CancelOrder" Grid.Column="1" >Cancel Order</Button>
+            <Button Name="CancelOrder" Grid.Column="1" Click="CancelOrder_Click" >Cancel Order</Button>
         
-            <Button x:Name="CompleteOrder" Content="Complete Order" Click="CompleteOrder_Click" Grid.Column="2" />
+            <Button Name="CompleteOrder" Content="Complete Order" Click="CompleteOrder_Click" Grid.Column="2" />
                 
             </Grid>
             <local:MenuItemSelectionControl Grid.Column="0"/>

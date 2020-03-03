@@ -1,6 +1,6 @@
 ﻿/* Author: Cole Griem
  * Class: OrderControl.xaml.cs
- * Purpose: Control the buttons
+ * Purpose: Control the top 3 buttons
  */
 using System;
 using System.Collections.Generic;
@@ -35,160 +35,39 @@ namespace Point_of_Sale
 
         
         /// <summary>
-        /// Adds the Angry Chicken
+        /// Completes the order and makes a new one
         /// </summary>
         /// <param name="sender">button</param>
         /// <param name="e">click</param>
-        private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
+        private void CompleteOrder_Click(object sender, RoutedEventArgs e)
         {
             if(DataContext is Order data)
             {
-                data.Add(new AngryChicken());
+                data = new Order();
+                this.DataContext = data;
             }
-            
         }
 
         /// <summary>
-        /// Adds Cowpoke Chili
+        /// Cancels the order and creates a new one
         /// </summary>
         /// <param name="sender">button</param>
         /// <param name="e">click</param>
-        private void AddCowpokeChili_Click(object sender, RoutedEventArgs e)
+        private void CancelOrder_Click(object sender, RoutedEventArgs e)
         {
-            if(DataContext is Order data) data.Add(new CowpokeChili());
+            if(DataContext is Order data)
+            {
+                data = new Order();
+                this.DataContext = data;
+            }
         }
 
         /// <summary>
-        /// Adds Dakota Double Burger
+        /// Doesn't have an effect yet
         /// </summary>
         /// <param name="sender">button</param>
         /// <param name="e">click</param>
-        private void AddDakotaDoubleBurger_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new DakotaDoubleBurger());
-        }
-
-        /// <summary>
-        /// Adds Pecos Pulled Pork
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddPecosPulledPork_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new PecosPulledPork());
-        }
-
-        /// <summary>
-        /// Adds Texas Triple Burger
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddTexasTripleBurger_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new TexasTripleBurger());
-        }
-
-        /// <summary>
-        /// Adds Trail Burger
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddTrailBurger_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new TrailBurger());
-        }
-
-        /// <summary>
-        /// Adds Chili Cheese Fries
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddChiliCheeseFries_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new ChiliCheeseFries());
-        }
-
-        /// <summary>
-        /// Adds Jerked Soda
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void AddJerkedSoda_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new JerkedSoda());
-        }
-
-        /// <summary>
-        /// Adds Corn Dodgers
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddCornDodgers_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new CornDodgers());
-        }
-
-        /// <summary>
-        /// Adds Pan De Campo
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddPanDeCampo_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new PanDeCampo());
-        }
-
-        /// <summary>
-        /// Adds Baked Beans
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddBakedBeans_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new BakedBeans());
-        }
-
-        /// <summary>
-        /// Adds Texas Tea
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddTexasTea_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new TexasTea());
-        }
-
-        /// <summary>
-        /// Adds Cowboy Coffee
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddCowboyCoffee_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new CowboyCoffee());
-        }
-
-        /// <summary>
-        /// Adds Water
-        /// </summary>
-        /// <param name="sender">button</param>
-        /// <param name="e">click</param>
-        private void AddWater_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new Water());
-        }
-
-        /// <summary>
-        /// Adds Rustlers Rib
-        /// </summary>
-        /// <param name="sender">button </param>
-        /// <param name="e">click </param>
-        private void AddRustlerRibs_Click(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is Order data) data.Add(new RustlersRibs());
-        }
-
-        private void CompleteOrder_Click(object sender, RoutedEventArgs e)
+        private void ItemSelection_Click(object sender, RoutedEventArgs e)
         {
 
         }
