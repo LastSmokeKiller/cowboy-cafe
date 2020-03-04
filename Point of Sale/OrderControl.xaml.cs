@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using Point_of_Sale.Customization;
 
 namespace Point_of_Sale
 {
@@ -69,7 +70,12 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void ItemSelection_Click(object sender, RoutedEventArgs e)
         {
+            Container.Child = new MenuItemSelectionControl();
+        }
 
+        public void SwapScreen(FrameworkElement element)
+        {
+            Container.Child = element;
         }
     }
 }

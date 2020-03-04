@@ -32,8 +32,11 @@
             <Button Name="CompleteOrder" Content="Complete Order" Click="CompleteOrder_Click" Grid.Column="2" />
                 
             </Grid>
-            <local:MenuItemSelectionControl Grid.Column="0"/>
+            
         </StackPanel>
+        <Border x:Name="Container" Grid.Column="0" Grid.Row="1" Margin="0,37,0,-37">
+            <local:MenuItemSelectionControl Grid.Column="0"/>
+        </Border>
 
         <local:OrderSummaryControl HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
         

@@ -5,14 +5,16 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// The class for the Drink of Water
     /// </summary>
-    public class Water : Drink
+    public class Water : Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Checks if you want a lemon in your water
         /// </summary>

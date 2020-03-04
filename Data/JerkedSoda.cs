@@ -5,14 +5,16 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// The class for the Jerked Soda Drink
     /// </summary>
-    public class JerkedSoda:Drink
+    public class JerkedSoda:Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// Checks what flavor you want your soda
@@ -29,10 +31,13 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Large:
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                         return 2.59;
                     case Size.Medium:
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                         return 2.10;
                     case Size.Small:
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                         return 1.59;
                     default:
                         throw new NotImplementedException();

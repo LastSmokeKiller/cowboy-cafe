@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// The Baked Beans side
     /// </summary>
-    public class BakedBeans:Side
+    public class BakedBeans:Side, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// How many Calories are in each size of the baked beans
         /// </summary>
@@ -19,10 +22,13 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Large:
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                         return 410;
                     case Size.Medium:
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                         return 378;
                     case Size.Small:
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                         return 312;
                     default:
                         throw new NotImplementedException();

@@ -33,6 +33,7 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock HorizontalAlignment="Left" Width="200" Text="{Binding}"/>
                             <TextBlock  Grid.Column="1" Width="50" Text="{Binding Price, Mode=OneWay, StringFormat=c}"/>
+                            <TextBlock Text="{Binding Path = items}" Grid.Row="1" Grid.Column="2"/>
                         </Grid>
                     </DataTemplate>
 
