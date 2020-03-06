@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Point_of_Sale.Customization.CowpokeChiliCustomization"
+﻿<UserControl x:Class="Point_of_Sale.Customization.TexasTripleBurgerCustomization"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,24 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="400">
     <StackPanel>
-        <TextBlock FontSize="35">Customize this Chili!</TextBlock>
+        <TextBlock FontSize="35">Texas Triple Burger</TextBlock>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path=Cheese}"/>
-            
-            <TextBlock Text="Cheese"/>
+            <CheckBox IsChecked="{Binding Path=Bun}"/>
+            <TextBlock Text="Bun"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path=SourCream}"/>
-            <TextBlock Text="Sour Cream"/>
+            <CheckBox IsChecked="{Binding Path=Ketchup}"/>
+            <TextBlock Text="Ketchup"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path=GreenOnions}"/>
-            <TextBlock Text="Green Onions"/>
+            <CheckBox IsChecked="{Binding Path=Mustard}"/>
+            <TextBlock Text="Mustard"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path=TortillaStrips}"/>
-            <TextBlock Text="Tortilla Strips"/>
+            <CheckBox IsChecked="{Binding Path=Pickle}"/>
+            <TextBlock Text="Pickle"/>
         </StackPanel>
-        
     </StackPanel>
 </UserControl>

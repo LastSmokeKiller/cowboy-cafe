@@ -15,20 +15,39 @@ namespace CowboyCafe.Data
     public class CowboyCoffee:Drink, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
+
+        private bool roomForCream = false;
         /// <summary>
         /// This checks if there is room for cream and is defaulted to false
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream { get { return roomForCream; } set {
+                roomForCream = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoomForCream"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            } }
+
+        private bool ice = false;
 
         /// <summary>
         /// This checks if you want an iced coffee
         /// </summary>
-        public override bool Ice { get; set; } = false;
-        
+        public override bool Ice { get { return ice;} set { 
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            } }
+
+        private bool decaf = false;
+
         /// <summary>
         /// This checks if you actually want a good coffee, automatically set to give you a real coffee
         /// </summary>
-        public bool Decaf { get; set; } = false;
+        public bool Decaf { get { return decaf; } set {
+                decaf = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Decaf"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            } }
 
 
         /// <summary>

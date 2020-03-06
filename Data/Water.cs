@@ -15,10 +15,17 @@ namespace CowboyCafe.Data
     public class Water : Drink, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
+        private bool lemon = false;
+
         /// <summary>
         /// Checks if you want a lemon in your water
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon { get { return lemon; } set {
+                lemon = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            } }
 
         /// <summary>
         /// Checks how much the water costs

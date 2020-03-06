@@ -16,15 +16,29 @@ namespace CowboyCafe.Data
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+
+        private bool lemon = false;
         /// <summary>
         /// Checks if you want to put a lemon in your tea
         /// </summary>
-        public bool Lemon { get; set; } = false;
-        
+        public bool Lemon { get { return lemon; } set
+            {
+                lemon = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+
+        private bool sweet = true;
+
         /// <summary>
         /// Checks if you want your tea to actually taste good with sugar or without sugar
         /// </summary>
-        public bool Sweet { get; set; } = true;
+        public bool Sweet { get { return sweet; } set {
+                sweet = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sweet"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            } } 
 
         /// <summary>
         /// Checks the price for the tea

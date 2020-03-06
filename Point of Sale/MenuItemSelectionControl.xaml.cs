@@ -30,6 +30,8 @@ namespace Point_of_Sale
             InitializeComponent();
         }
 
+        
+
         /// <summary>
         /// Adds the Angry Chicken
         /// </summary>
@@ -37,9 +39,14 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddAngryChickenButton_Click(object sender, RoutedEventArgs e)
         {
+            var ordercontrol = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
-                data.Add(new AngryChicken());
+                var item = new AngryChicken();
+                var screen = new AngryChickenCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
             }
 
         }
@@ -54,8 +61,11 @@ namespace Point_of_Sale
             var ordercontrol = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
-                data.Add(new CowpokeChili());
-                ordercontrol.SwapScreen(new CowpokeChiliCustomization());
+                var item = new CowpokeChili();
+                var screen = new CowpokeChiliCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
             }
 
         }
@@ -67,7 +77,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddDakotaDoubleBurger_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new DakotaDoubleBurger());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new DakotaDoubleBurger();
+                var screen = new DakotaDoubleCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -77,7 +95,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddPecosPulledPork_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new PecosPulledPork());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new PecosPulledPork();
+                var screen = new PecosPulledPorkCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -87,7 +113,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddTexasTripleBurger_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new TexasTripleBurger());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new TexasTripleBurger();
+                var screen = new TexasTripleBurgerCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -97,7 +131,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddTrailBurger_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new TrailBurger());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new TrailBurger();
+                var screen = new TrailBurgerCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -107,7 +149,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddChiliCheeseFries_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new ChiliCheeseFries());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new ChiliCheeseFries();
+                var screen = new ChiliCheeseFriesCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -117,7 +167,15 @@ namespace Point_of_Sale
         /// <param name="e"></param>
         private void AddJerkedSoda_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new JerkedSoda());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new JerkedSoda();
+                var screen = new JerkedSodaCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -127,7 +185,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddCornDodgers_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new CornDodgers());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new CornDodgers();
+                var screen = new CornDodgersCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -137,7 +203,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddPanDeCampo_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new PanDeCampo());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new PanDeCampo();
+                var screen = new PanDeCampoCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -147,7 +221,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddBakedBeans_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new BakedBeans());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new BakedBeans();
+                var screen = new BakedBeansCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -157,7 +239,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddTexasTea_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new TexasTea());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new TexasTea();
+                var screen = new TexasTeaCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -167,7 +257,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddCowboyCoffee_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new CowboyCoffee());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new CowboyCoffee();
+                var screen = new CowpokeCoffeeCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -177,7 +275,15 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void AddWater_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new Water());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new Water();
+                var screen = new WaterCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
 
         /// <summary>
@@ -187,7 +293,15 @@ namespace Point_of_Sale
         /// <param name="e">click </param>
         private void AddRustlerRibs_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Order data) data.Add(new RustlersRibs());
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                var item = new RustlersRibs();
+                var screen = new RustlersRibsCustomization();
+                screen.DataContext = item;
+                data.Add(item);
+                ordercontrol.SwapScreen(screen);
+            }
         }
     }
 }
