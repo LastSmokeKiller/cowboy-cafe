@@ -5,8 +5,22 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Point_of_Sale.Customization"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
-            
+        <StackPanel>
+            <TextBlock FontSize="35">Texas Tea</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Path=Sweet}"/>
+                <TextBlock Text="Sweetness"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Path=Lemon}"/>
+                <TextBlock Text="Lemon"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Path=Ice}"/>
+                <TextBlock Text="Ice"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

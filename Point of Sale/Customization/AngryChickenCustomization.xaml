@@ -5,8 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Point_of_Sale.Customization"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
-            
+        <StackPanel>
+            <TextBlock FontSize="35">Angry Chicken</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Path=Bread}"/>
+                <TextBlock Text="Bread"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Path=Pickle}"/>
+                <TextBlock Text="Pickle"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

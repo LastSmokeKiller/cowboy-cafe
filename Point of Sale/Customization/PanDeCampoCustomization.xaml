@@ -7,6 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
-            
+        <StackPanel>
+            <TextBlock FontSize="35">Pan De Campo</TextBlock>
+        </StackPanel>
     </Grid>
 </UserControl>

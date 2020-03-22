@@ -109,11 +109,16 @@ namespace CowboyCafe.Data
         /// <summary>
         /// If Dakota slapped some Mayo in there
         /// </summary>
-        public bool Mayo { get { return Mayo; } set {
+        public bool Mayo
+        {
+            get { return mayo; }
+            set 
+            {
                 mayo = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mayo"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
-            } }
+            } 
+        }
 
         /// <summary>
         /// How much you pay for Dakota

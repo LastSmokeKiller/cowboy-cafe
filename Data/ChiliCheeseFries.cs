@@ -42,13 +42,10 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Large:
-                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                         return 3.99;
                     case Size.Medium:
-                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                         return 2.99;
                     case Size.Small:
-                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                         return 1.99;
                     default:
                         throw new NotImplementedException();
