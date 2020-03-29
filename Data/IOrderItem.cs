@@ -16,11 +16,11 @@ namespace CowboyCafe.Data
         /// <summary>
         /// List of special instructions
         /// </summary>
-        public List<string> SpecialInstructions { get; }
+        List<string> SpecialInstructions { get; }
         /// <summary>
         /// price of an item
         /// </summary>
-        public double Price { get; }
+        double Price { get; }
 
     }
 }

@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CowboyCafe.Data;
 
 namespace Point_of_Sale
 {
@@ -22,9 +23,27 @@ namespace Point_of_Sale
     /// </summary>
     public partial class OrderSummaryControl : UserControl
     {
+
+        
+
         public OrderSummaryControl()
         {
+            
             InitializeComponent();
+            
+        }
+
+
+
+        public void OnDeleteItemButtonClicked(object sender, RoutedEventArgs e)
+        {
+            if(DataContext is OrderControl data)
+            {
+                if(sender is Button button)
+                {
+                    
+                }
+            }
         }
     }
 }

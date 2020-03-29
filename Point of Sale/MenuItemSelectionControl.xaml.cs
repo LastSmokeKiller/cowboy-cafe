@@ -303,5 +303,16 @@ namespace Point_of_Sale
                 ordercontrol.SwapScreen(screen);
             }
         }
+
+        public void Remove(IOrderItem item)
+        {
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if (DataContext is Order data)
+            {
+                data.Remove(item);
+                
+            }
+        }
+
     }
 }
