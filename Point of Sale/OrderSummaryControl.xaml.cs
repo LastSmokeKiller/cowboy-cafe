@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using Point_of_Sale.Customization;
+using Point_of_Sale.ExtentionMethods;
 
 namespace Point_of_Sale
 {
@@ -33,15 +35,155 @@ namespace Point_of_Sale
             
         }
 
-
+        public void Selected(object sender, SelectionChangedEventArgs args)
+        {
+            IOrderItem i = ((sender as ListBox).SelectedItem as IOrderItem);
+            var ordercontrol = this.FindAncestor<OrderControl>();
+            if(i is AngryChicken)
+            {
+                
+                if (DataContext is Order data)
+                {
+                    var screen = new AngryChickenCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is BakedBeans)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new BakedBeansCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is ChiliCheeseFries)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new ChiliCheeseFriesCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is CornDodgers)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new CornDodgersCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is CowboyCoffee)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new CowpokeCoffeeCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is CowpokeChili)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new CowpokeChiliCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is DakotaDoubleBurger)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new DakotaDoubleCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is JerkedSoda)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new JerkedSodaCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is PanDeCampo)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new PanDeCampoCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is PecosPulledPork)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new PecosPulledPorkCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is RustlersRibs)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new RustlersRibsCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is TexasTea)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new TexasTeaCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is TexasTripleBurger)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new TexasTripleBurgerCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is TrailBurger)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new TrailBurgerCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+            else if (i is Water)
+            {
+                if (DataContext is Order data)
+                {
+                    var screen = new WaterCustomization();
+                    screen.DataContext = i;
+                    ordercontrol.SwapScreen(screen);
+                }
+            }
+        }
 
         public void OnDeleteItemButtonClicked(object sender, RoutedEventArgs e)
         {
-            if(DataContext is OrderControl data)
+            if(DataContext is Order data)
             {
                 if(sender is Button button)
                 {
-                    
+                    data.Remove((IOrderItem)button.DataContext);
                 }
             }
         }

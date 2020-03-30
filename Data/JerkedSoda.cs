@@ -16,6 +16,23 @@ namespace CowboyCafe.Data
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+
+        private bool ice = true;
+
+        /// <summary>
+        /// This checks if you want ice in Soda
+        /// </summary>
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+
         /// <summary>
         /// Checks what flavor you want your soda
         /// </summary>

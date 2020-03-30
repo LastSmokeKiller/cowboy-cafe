@@ -23,8 +23,8 @@
             <TextBox HorizontalAlignment="Center" Width="375" Height="25" Text="{Binding Path=OrderNumber, Mode=OneWay, StringFormat='Order {0}'}"/>
 
 
-            <ListView Width="375" Height="375" ItemsSource="{Binding Items}">
-                <ListView.ItemTemplate>
+            <ListBox SelectionChanged="Selected" Width="375" Height="375" ItemsSource="{Binding Items}">
+                <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -44,9 +44,9 @@
                         </Grid>
                     </DataTemplate>
 
-                </ListView.ItemTemplate>
+                </ListBox.ItemTemplate>
 
-            </ListView>
+            </ListBox>
 
         </StackPanel>
         <TextBox Grid.Row="1" VerticalAlignment="Center" Height="50" Margin="10,0,75,0">Subtotal</TextBox>

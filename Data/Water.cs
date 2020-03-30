@@ -27,12 +27,29 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             } }
 
+        private bool ice = true;
+
+        /// <summary>
+        /// This checks if you want ice in water
+        /// </summary>
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+
         /// <summary>
         /// Checks how much the water costs
         /// </summary>
         public override double Price
         {
             get { return .12; }
+            
         }
 
         /// <summary>
