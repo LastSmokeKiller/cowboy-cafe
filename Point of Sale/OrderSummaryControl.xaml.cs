@@ -35,6 +35,11 @@ namespace Point_of_Sale
             
         }
 
+        /// <summary>
+        /// Whatever listbox is selected is pulled up so you can edit the order item
+        /// </summary>
+        /// <param name="sender">Listbox</param>
+        /// <param name="args">selected</param>
         public void Selected(object sender, SelectionChangedEventArgs args)
         {
             IOrderItem i = ((sender as ListBox).SelectedItem as IOrderItem);
@@ -177,6 +182,11 @@ namespace Point_of_Sale
             }
         }
 
+        /// <summary>
+        /// When the x button is clicked, the order item is deleted                                                           
+        /// </summary>
+        /// <param name="sender">button</param>
+        /// <param name="e">click</param>
         public void OnDeleteItemButtonClicked(object sender, RoutedEventArgs e)
         {
             if(DataContext is Order data)
