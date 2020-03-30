@@ -30,5 +30,25 @@ namespace CowboyCafe.DataTests.PropertyChangedTests
             Assert.PropertyChanged(water, "SpecialInstructions", () => { water.Ice = false; });
         }
 
+        [Fact]
+        public void ChangingSizeShouldInvokePropertyChangedForSize()
+        {
+            var water = new Water();
+            Assert.PropertyChanged(water, "Size", () => { water.Size = Size.Large; });
+        }
+
+        [Fact]
+        public void ChangingSizeShouldInvokePropertyChangedForCalories()
+        {
+            var water = new Water();
+            Assert.PropertyChanged(water, "Calories", () => { water.Size = Size.Large; });
+        }
+
+        [Fact]
+        public void ChangingSizeShouldInvokePropertyChangedForPrice()
+        {
+            var water = new Water();
+            Assert.PropertyChanged(water, "Price", () => { water.Size = Size.Large; });
+        }
     }
 }

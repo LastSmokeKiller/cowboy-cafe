@@ -29,5 +29,27 @@ namespace CowboyCafe.DataTests.PropertyChangedTests
             var soda = new JerkedSoda();
             Assert.PropertyChanged(soda, "SpecialInstructions", () => { soda.Ice = false; });
         }
+
+        [Fact]
+        public void ChangingSizeShouldInvokePropertyChangedForSize()
+        {
+            var soda = new JerkedSoda();
+            Assert.PropertyChanged(soda, "Size", () => { soda.Size = Size.Large; });
+        }
+
+        [Fact]
+        public void ChangingSizeShouldInvokePropertyChangedForCalories()
+        {
+            var soda = new JerkedSoda();
+            Assert.PropertyChanged(soda, "Calories", () => { soda.Size = Size.Large; });
+        }
+
+        [Fact]
+        public void ChangingSizeShouldInvokePropertyChangedForPrice()
+        {
+            var soda = new JerkedSoda();
+            Assert.PropertyChanged(soda, "Price", () => { soda.Size = Size.Large; });
+        }
+
     }
 }

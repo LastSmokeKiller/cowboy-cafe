@@ -15,5 +15,26 @@ namespace CowboyCafe.DataTests.PropertyChangedTests
             var pan = new PanDeCampo();
             Assert.IsAssignableFrom<INotifyPropertyChanged>(pan);
         }
+
+        [Fact]
+        public void ChangingSizeShouldInvokePropertyChangedForSize()
+        {
+            var pan = new PanDeCampo();
+            Assert.PropertyChanged(pan, "Size", () => { pan.Size = Size.Large; });
+        }
+
+        [Fact]
+        public void ChangingSizeShouldInvokePropertyChangedForCalories()
+        {
+            var pan = new PanDeCampo();
+            Assert.PropertyChanged(pan, "Calories", () => { pan.Size = Size.Large; });
+        }
+
+        [Fact]
+        public void ChangingSizeShouldInvokePropertyChangedForPrice()
+        {
+            var pan = new PanDeCampo();
+            Assert.PropertyChanged(pan, "Price", () => { pan.Size = Size.Large; });
+        }
     }
 }
