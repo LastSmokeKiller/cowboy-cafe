@@ -225,7 +225,7 @@ namespace Point_of_Sale
             if (DataContext is Order data)
             {
                 var item = new BakedBeans();
-                var screen = new BakedBeansCustomization();
+                var screen = new BakedBeansCustomization(DataContext);
                 screen.DataContext = item;
                 data.Add(item);
                 ordercontrol.SwapScreen(screen);

@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CowboyCafe.Data;
+using Size = CowboyCafe.Data.Size;
 
 namespace Point_of_Sale.Customization
 {
@@ -18,9 +20,20 @@ namespace Point_of_Sale.Customization
     /// </summary>
     public partial class BakedBeansCustomization : UserControl
     {
-        public BakedBeansCustomization()
+        private Order linkToOrder;
+        public BakedBeansCustomization(object dc)
         {
+            linkToOrder = (Order)dc;
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BakedBeans bb = (BakedBeans)DataContext;
+            /*switch (((Button)sender).Name)
+            {
+                
+            }*/
         }
     }
 }

@@ -9,6 +9,12 @@
     <Grid>
         <StackPanel>
             <TextBlock FontSize="35">Baked Beans</TextBlock>
+            <TextBlock FontSize="20">Size</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Small_Button" Content="Small" HorizontalAlignment="Left" Click="Button_Click"/>
+                <Button Name="Medium_Button" HorizontalAlignment="Center" Content="Medium" Click="Button_Click"/>
+                <Button x:Name="Large_Button" HorizontalAlignment="Right" Content="Large" Click="Button_Click"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </UserControl>

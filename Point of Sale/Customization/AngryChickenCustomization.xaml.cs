@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CowboyCafe.Data;
 
 namespace Point_of_Sale.Customization
 {
@@ -18,8 +19,11 @@ namespace Point_of_Sale.Customization
     /// </summary>
     public partial class AngryChickenCustomization : UserControl
     {
+        
+
         public AngryChickenCustomization()
         {
+            
             InitializeComponent();
         }
     }
