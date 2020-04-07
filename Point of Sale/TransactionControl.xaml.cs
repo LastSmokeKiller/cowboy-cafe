@@ -80,9 +80,12 @@ namespace Point_of_Sale
             foreach(IOrderItem e in item)
             {
                 print += e.ToString() + " " + e.Price;
-                if(e.SpecialInstructions.ToString() != "")
+                if(e.SpecialInstructions.Count != 0)
                 {
-                    print += e.SpecialInstructions.ToString();
+                    foreach(string s in e.SpecialInstructions)
+                    {
+                        print += s.ToString() + "\n";
+                    }
                 }
             }
             string printEnd = "\n" + sub.ToString() + "\n" + total.ToString() + "\n" + paymentType + "\n";
