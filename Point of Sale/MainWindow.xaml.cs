@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using CashRegister;
 
 namespace Point_of_Sale
 {
@@ -34,8 +35,6 @@ namespace Point_of_Sale
         public MainWindow()
         {
             InitializeComponent();
-            
-            
         }
     }
 }

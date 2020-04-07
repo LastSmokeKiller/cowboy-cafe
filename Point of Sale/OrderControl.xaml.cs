@@ -15,7 +15,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using Point_of_Sale.ExtentionMethods;
 using Point_of_Sale.Customization;
+using CashRegister;
 
 namespace Point_of_Sale
 {
@@ -34,6 +36,7 @@ namespace Point_of_Sale
             this.DataContext = data;
         }
 
+        public CashDrawer drawer = new CashDrawer();
         
         /// <summary>
         /// Completes the order and makes a new one
@@ -42,10 +45,13 @@ namespace Point_of_Sale
         /// <param name="e">click</param>
         private void CompleteOrder_Click(object sender, RoutedEventArgs e)
         {
+            
             if(DataContext is Order data)
             {
-                data = new Order();
-                this.DataContext = data;
+                var screen = new TransactionControl();
+                screen.DataContext = data;
+                SwapScreen(screen);
+                
             }
         }
 
@@ -61,6 +67,7 @@ namespace Point_of_Sale
                 data = new Order();
                 this.DataContext = data;
             }
+            Container.Child = new MenuItemSelectionControl();
         }
 
         /// <summary>
