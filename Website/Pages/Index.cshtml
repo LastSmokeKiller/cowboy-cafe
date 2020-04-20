@@ -1,5 +1,6 @@
 ﻿@page
 @model IndexModel
+@using CowboyCafe.Data
 @{
     ViewData["Title"] = "Home page";
 }
@@ -8,3 +9,57 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<h1>Cowboy Cafe</h1>
+<p>We at Cowboy Cafe are proud to bring you authentic trail meals from the American West.
+    Shake off the dust on your boots and sake your thirst with one of our old-fashioned
+    hand-jerked sodas. Dip your Pan de Campo into a bowl of beans.
+    Or conquer the mighty Texas Triple Burger! You've had a hard ride - so take it easy with us</p>
+<h2>Entree</h2>
+<ul class="entrees">
+    @foreach(IOrderItem entree in Menu.AllEntrees)
+    {
+        <li>
+            <div class="menu-item">
+                <h3 class="name">@entree.ToString()</h3>
+                <div class="price">Price @entree.Price</div>
+                <div class="calories">Calories @entree.Calories</div>
+            </div>
+
+            
+        </li>
+    }
+
+</ul>
+<h2>Sides</h2>
+<ul class="sides">
+    @foreach(IOrderItem side in Menu.AllSides)
+    {
+        <li>
+            <div class="menu-item">
+                <h3 class="name">@side.ToString()</h3>
+                <div class="price">
+                    Price @side.Price
+                </div>
+                <div class="calories">
+                    Calories @side.Calories
+                </div>
+            </div>
+        </li>
+    }
+</ul>
+<h2>Drinks</h2>
+<ul class="drinks">
+    @foreach(IOrderItem drink in Menu.AllDrinks)
+    {
+    <li>
+        <div class="menu-item">
+            <h3 class="name">@drink.ToString()</h3>
+            <div class="price">Price @drink.Price</div>
+            <div class="calories">Calories @drink.Calories</div>
+        </div>
+
+
+    </li>
+    }
+</ul>
