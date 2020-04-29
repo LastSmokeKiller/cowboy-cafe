@@ -24,5 +24,7 @@ namespace CowboyCafe.Data
 
         uint Calories { get; }
 
+        string ItemType { get; }
+
     }
 }

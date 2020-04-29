@@ -14,6 +14,8 @@ namespace CowboyCafe.DataTests
             public List<string> SpecialInstructions { get; set; } = new List<string>();
 
             public uint Calories { get; set; }
+
+            public string ItemType { get; set; }
         }
 
         [Fact]

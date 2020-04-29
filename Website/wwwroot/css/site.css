@@ -108,3 +108,18 @@ ul.drinks > li {
     justify-content: space-between;
     min-height: 50px;
 }
+
+
+#search{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+#filters input[type=number]{
+    width: 3rem;
+}
+
+#filter h4{
+    margin-bottom: 0.2rem;
+}

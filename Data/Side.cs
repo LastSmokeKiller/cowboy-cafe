@@ -29,5 +29,7 @@ namespace CowboyCafe.Data
         public abstract uint Calories { get; }
 
         public virtual List<string> SpecialInstructions { get { return new List<string>(); } }
+
+        public virtual string ItemType { get { return "Side"; } }
     }
 }

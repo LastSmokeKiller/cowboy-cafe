@@ -34,5 +34,7 @@ namespace CowboyCafe.Data
         /// Sets if the 
         /// </summary>
         public virtual bool Ice { get; set; } = true;
+
+        public virtual string ItemType { get { return "Drink"; } }
     }
 }
