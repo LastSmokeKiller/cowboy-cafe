@@ -22,51 +22,61 @@ namespace Website.Pages
         /// <summary>
         /// The Search term
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public string SearchTerms { get; set; } = "";
 
         /// <summary>
         /// Checks if there are any sides in the item list
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public bool EntreeCheck { get; set; } = false;
 
         /// <summary>
         /// Checks if there are any sides in the item list
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public bool SideCheck { get; set; } = false;
 
         /// <summary>
         /// Checks if there are any drinks in the item list
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public bool DrinkCheck { get; set; } = false;
 
         /// <summary>
         /// items list that can be edited
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public IEnumerable<IOrderItem> items { get; protected set; }
 
         /// <summary>
         /// categories items can fall under
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public string[] itemType { get; set; }
 
         /// <summary>
         /// price min range
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public double? CMin { get; set; }
 
         /// <summary>
         /// price max range
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public double? CMax { get; set; }
 
         /// <summary>
         /// Price min range
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public double? PMin { get; set; }
 
         /// <summary>
         /// Price max range
         /// </summary>
+        [BindProperty(SupportsGet = true)]
         public double? PMax { get; set; }
 
         /// <summary>
@@ -78,18 +88,48 @@ namespace Website.Pages
         /// <param name="PMax"> Price max</param>
         public void OnGet(double? CMin, double? CMax, double? PMin, double? PMax)
         {
-            items = Menu.CompleteMenu();
-            this.CMin = CMin;
-            this.CMax = CMax;
-            this.PMin = PMin;
-            this.PMax = PMax;
-            SearchTerms = Request.Query["SearchTerms"];
-            itemType = Request.Query["itemType"];
-            items = Menu.Search(items, SearchTerms);
-            items = Menu.FilterByCategory(items, itemType);
-            items = Menu.FilterByCalories(items, CMin, CMax);
-            items = Menu.FilterByPrice(items, PMin, PMax);
+            
 
+            items = Menu.All;
+            if(SearchTerms != null)
+            {
+                items = items.Where(items => items.ToString() != null && items.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
+            }
+            if(itemType != null && itemType.Length != 0)
+            {
+                items = items.Where(items => items.ItemType != null && itemType.Contains(items.ItemType));
+            }
+            if(CMax != null && CMin != null)
+            {
+                if(CMin == null)
+                {
+                    items = items.Where(items => items.Calories <= CMax);
+                }
+                else if(CMax == null)
+                {
+                    items = items.Where(items => items.Calories >= CMin);
+                }
+                else
+                {
+                    items = items.Where(items => items.Calories <= CMax && items.Calories >= CMin);
+                }
+            }
+            if(PMin != null && PMax != null)
+            {
+                if(PMin == null)
+                {
+                    items = items.Where(items => items.Price <= PMax);
+                }
+                else if(PMax == null)
+                {
+                    items = items.Where(items => items.Price >= PMin);
+                }
+                else
+                {
+                    items = items.Where(items => items.Price <= PMax && items.Price >= PMin);
+                }
+                
+            }
         }
     }
 }

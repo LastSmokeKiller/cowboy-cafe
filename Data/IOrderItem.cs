@@ -26,5 +26,7 @@ namespace CowboyCafe.Data
 
         string ItemType { get; }
 
+        
+
     }
 }

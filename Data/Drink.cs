@@ -36,5 +36,7 @@ namespace CowboyCafe.Data
         public virtual bool Ice { get; set; } = true;
 
         public virtual string ItemType { get { return "Drink"; } }
+
+        
     }
 }

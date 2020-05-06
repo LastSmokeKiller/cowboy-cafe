@@ -6,10 +6,7 @@
 }
 
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
 
 <form id="cafe-database">
     <div id="search">
@@ -44,7 +41,7 @@
         </div>
 
     </div>
-
+    
     <h1>Cowboy Cafe</h1>
     <p>
         We at Cowboy Cafe are proud to bring you authentic trail meals from the American West.
@@ -67,8 +64,10 @@
             Model.DrinkCheck = true;
         }
     }
+<div class="flex-columns">
     @if (Model.EntreeCheck)
     {
+    <div>
         <h2>Entree</h2>
         <ul class="entrees">
             @foreach (IOrderItem entree in Model.items)
@@ -81,69 +80,88 @@
                             <h3 class="name">@entree.ToString()</h3>
                             <div class="price">Price $@entree.Price</div>
                             <div class="calories">Calories @entree.Calories</div>
-                            
+
 
                         </div>
 
 
                     </li>
-                    }
                 }
+            }
 
         </ul>
+    </div>
     }
 
     @if (Model.SideCheck)
     {
-        <h2>Sides</h2>
-        <ul class="sides">
-            @foreach (IOrderItem side in Model.items)
+<div>
+    <h2>Sides</h2>
+    <ul class="sides">
+        @foreach (IOrderItem side in Model.items)
+        {
+            @if (side.ItemType == "Side")
             {
-                @if (side.ItemType == "Side")
-                {
-                    <li>
-                        <div class="menu-item">
+                <li>
+                    <div class="menu-item">
 
-                            <h3 class="name">@side.ToString()</h3>
-                            <div class="price">
-                                Price $@side.Price
-                            </div>
-                            <div class="calories">
-                                Calories @side.Calories
-                            </div>
-
-
+                        <h3 class="name">@side.ToString()</h3>
+                        <div class="price">
+                            Price $@side.Price
                         </div>
-                    </li>
-                }
+                        <div class="calories">
+                            Calories @side.Calories
+                        </div>
+
+
+                    </div>
+                </li>
             }
-        </ul>
+        }
+    </ul>
+</div>
     }
 
     @if (Model.DrinkCheck)
     {
-        <h2>Drinks</h2>
-        <ul class="drinks">
-            @foreach (IOrderItem drink in Model.items)
+<div>
+    <h2>Drinks</h2>
+    <ul class="drinks">
+        @foreach (IOrderItem drink in Model.items)
+        {
+            @if (drink.ItemType == "Drink")
             {
-                @if (drink.ItemType == "Drink")
-                {
-                    <li>
-                        <div class="menu-item">
+                <li>
+                    <div class="menu-item">
 
-                            <h3 class="name">@drink.ToString()</h3>
-                            <div class="price">Price $@drink.Price</div>
-                            <div class="calories">Calories @drink.Calories</div>
+                        <h3 class="name">@drink.ToString()</h3>
+                        @if(drink.ToString() == "Small Orange Soda Jerked Soda")
+                        {
+                            var values = Enum.GetValues(typeof(SodaFlavor)).Cast<SodaFlavor>();
+                            <h4>Soda Flavors</h4>
+                            @foreach(SodaFlavor i in values)
+                            {
+                                
+                                <div class="SodaFlavors">@i</div>
+                            }
+                        }
+                        
+                        <div class="price">Price $@drink.Price</div>
+                        <div class="calories">Calories @drink.Calories</div>
 
 
-                        </div>
+                    </div>
 
 
-                    </li>
-                }
+                </li>
             }
-        </ul>
+        }
+    </ul>
+</div>
     }
+</div>
+    
+    
 
 </form>
 

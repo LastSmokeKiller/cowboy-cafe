@@ -70,13 +70,19 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
-.menu-items{
+form#cafe-database{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+}
+
+form > .menu-items{
     color: darkslategray;
     font-size: 1.2rem;
     margin: 0;
 }
 
-ul.entrees > li {
+form > ul.entrees > li {
     list-style-type: none;
     border-bottom: 1px solid lightgray;
     margin: 10px;
@@ -87,7 +93,7 @@ ul.entrees > li {
     min-height: 50px;
 }
 
-ul.sides > li {
+form > ul.sides > li {
     list-style-type: none;
     border-bottom: 1px solid lightgray;
     margin: 10px;
@@ -98,7 +104,7 @@ ul.sides > li {
     min-height: 50px;
 }
 
-ul.drinks > li {
+form > ul.drinks > li {
     list-style-type: none;
     border-bottom: 1px solid lightgray;
     margin: 10px;
@@ -122,4 +128,24 @@ ul.drinks > li {
 
 #filter h4{
     margin-bottom: 0.2rem;
+}
+
+@media (orientation: landscape){
+    h1{ color: green}
+}
+
+@media (orientation: portation){
+    h1{color: orange;}
+}
+
+
+.flex-columns{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 490px){
+    .flex-columns{
+        flex-direction: column;
+    }
 }
