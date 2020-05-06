@@ -86,7 +86,7 @@ namespace Website.Pages
         /// <param name="CMax"> Calories max </param>
         /// <param name="PMin"> Price min </param>
         /// <param name="PMax"> Price max</param>
-        public void OnGet(double? CMin, double? CMax, double? PMin, double? PMax)
+        public void OnGet()
         {
             
 

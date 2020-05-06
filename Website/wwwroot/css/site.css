@@ -130,21 +130,42 @@ form > ul.drinks > li {
     margin-bottom: 0.2rem;
 }
 
-@media (orientation: landscape){
-    h1{ color: green}
+
+@media (max-width: 750px){
+    aside{border: 3px dashed gray;}
 }
 
-@media (orientation: portation){
-    h1{color: orange;}
+aside {
+    border: 5px solid gray;
 }
 
+@media (max-width: 750px) {
+    aside {
+        border: 3px dashed gray;
+    }
+}
+
+@media (max-width: 490px) {
+    aside {
+        border: 2px dotted gray;
+    }
+}
+
+.float-columns > div {
+    float: left;
+    width: 33%;
+}
+
+.clearfix {
+    clear: both;
+}
 
 .flex-columns{
     display: flex;
     flex-direction: row;
 }
 
-@media (max-width: 490px){
+@media (orientation: portrait){
     .flex-columns{
         flex-direction: column;
     }
